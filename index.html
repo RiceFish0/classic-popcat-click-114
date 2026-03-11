@@ -61,6 +61,7 @@
             <div class="cat-img" id="p">0</div>
             <div id="op"></div>
         </div>
+        <audio id="popSound" src="pops/pop1.mp3"></audio>
         <script>
             let count = 0;
             let catImg = document.getElementById('p');
@@ -68,6 +69,9 @@
                 count++;
                 catImg.innerHTML = count;
                 catImg.id = 'op';
+                // 播放聲音
+                document.getElementById('popSound').currentTime = 0;
+                document.getElementById('popSound').play();
             }
             let close = () => {
                 catImg.id = 'p';
